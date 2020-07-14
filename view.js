@@ -41,11 +41,12 @@ function addHandler () {
 addButton.addEventListener('click', addHandler)
 
 multiplyButton.addEventListener('click', function () {
-    const x = Number(xInput.value)
-    const y = Number(yInput.value)
-
-    const result = calculator(x, y, multiply)
-    outputElement.innerHTML = result
+    outputElement.innerHTML = 
+        calculator(
+            Number(xInput.value), 
+            Number(yInput.value), 
+            multiply
+        )
 })
 
 divideButton.addEventListener('click', function () {
